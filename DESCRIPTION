@@ -1,0 +1,27 @@
+Package: ShinobiTools
+Type: Package
+Title: Hands on functions for daily data manipulation that all shinobi needs
+Version: 0.1.0
+Author: person("Nascimento", "Willber", email = "nascimentowillber@gamil.com",
+  role = c("aut", "cre"))
+Maintainer: The package maintainer <nascimentowillber@gamil.com>
+Description: This packages has a toolkit for data manipulation and analysis.
+    Among all there is a concatenate files, load pakages, remove accents and
+    themes for ggplot charts.
+License: MIT + file LICENSE
+URL: https://github.com/willbernascimento/ShinobiTools
+BugReports: https://github.com/willbernascimento/ShinobiTools/issues
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    ggplot2,
+    ggthemes,
+    reshape2,
+    electionsBR
+Remotes: 
+    silvadenisson/electionsBR
+Suggests: 
+    testthat,
+    stringr
+RoxygenNote: 6.1.1

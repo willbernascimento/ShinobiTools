@@ -1,12 +1,13 @@
 #' Load frequent used packages.
 #'
-#' If \code(x) do not specified, the package load a list of default packages.
+#' The package pass two argments x and y. x is a vector with packages that user plan to load. y is a logical vector, where TRUE load a default package list from developer.
+#' You need chosse Y TRUE or FALSE. If x do not specified, the package load a list of default packages.
 #' @param x A string vector of packages names (optional).
-#' @param y Logical.
+#' @param y Logical. If TRUE load the default package list (dplyr, ggplot2,ggthemes, reshape2, electionsBR)
 #' @export load_pkg
 #' @return Packages loaded.
 #' @examples
-#'
+#' load_pkg(x=c('rio', 'curl'),y=FALSE)
 load_pkg <- function(x,y){ # take 2 args, y is necessary
 
   # load x packages listed by the user AND y defaults packages

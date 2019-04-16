@@ -4,19 +4,20 @@
 \alias{load_pkg}
 \title{Load frequent used packages.}
 \usage{
-load_pkg(x = c(), y = NULL)
+load_pkg(x, y)
 }
 \arguments{
 \item{x}{A string vector of packages names (optional).}
 
-\item{y}{Logical.}
+\item{y}{Logical. If TRUE load the default package list (dplyr, ggplot2,ggthemes, reshape2, electionsBR)}
 }
 \value{
 Packages loaded.
 }
 \description{
-If \code(x) do not specified, the package load a list of default packages.
+The package pass two argments x and y. x is a vector with packages that user plan to load. y is a logical vector, where TRUE load a default package list from developer.
+You need chosse Y TRUE or FALSE. If x do not specified, the package load a list of default packages.
 }
 \examples{
-
+load_pkg(x=c('rio', 'curl'),y=FALSE)
 }

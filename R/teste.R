@@ -1,6 +1,6 @@
 library(ShinobiTools)
 
-cond1 <- function(x,y){ # take 2 args, y is necessary
+load_pkg <- function(x,y){ # take 2 args, y is necessary
 
   # load x packages listed by the user AND y defaults packages
   if(!missing(x) & y==TRUE){
@@ -30,5 +30,3 @@ cond1 <- function(x,y){ # take 2 args, y is necessary
       }
 }
 
-
-cond1('car',y=F)

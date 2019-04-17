@@ -8,6 +8,7 @@
 #' @return Packages loaded.
 #' @examples
 #' load_pkg(x=c('tools', 'curl'),y=FALSE)
+#'
 
 load_pkg <- function(x,y){ # take 2 args, y is necessary
 

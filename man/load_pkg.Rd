@@ -19,5 +19,5 @@ The package pass two argments x and y. x is a vector with packages that user pla
 You need chosse Y TRUE or FALSE. If x do not specified, the package load a list of default packages.
 }
 \examples{
-load_pkg(x=c('rio', 'curl'),y=FALSE)
+load_pkg(x=c('tools', 'curl'),y=FALSE)
 }

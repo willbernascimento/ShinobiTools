@@ -7,7 +7,8 @@
 #' @export load_pkg
 #' @return Packages loaded.
 #' @examples
-#' load_pkg(x=c('rio', 'curl'),y=FALSE)
+#' load_pkg(x=c('tools', 'curl'),y=FALSE)
+
 load_pkg <- function(x,y){ # take 2 args, y is necessary
 
   # load x packages listed by the user AND y defaults packages

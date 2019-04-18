@@ -12,13 +12,14 @@
 #'
 #'
 
-join_text <- function(path, pattern, header){
+join_text <- function(path, pattern='.csv', header=FALSE, sep=';', dec=',',
+                      enconding='UTF8'){
   setwd(path)
   dados1 <- NULL
   arquivos <- dir(pattern = pattern)
   for (i in 1:length(arquivos)) {
-    dados <- read.csv(arquivos[i],header = header, sep = ';', dec = ',',quote = "\"",
-                      fileEncoding = 'Latin1')
+    dados <- read.csv(arquivos[i],header = header, sep = sep, dec = dec,quote = "\"",
+                      fileEncoding = enconding)
     dados1 <- rbind(dados1, dados)
     print(arquivos[i])
   }

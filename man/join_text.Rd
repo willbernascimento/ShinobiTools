@@ -4,7 +4,8 @@
 \alias{join_text}
 \title{Load frequent used packages.}
 \usage{
-join_text(path, pattern, header)
+join_text(path, pattern = ".csv", header = FALSE, sep = ";",
+  dec = ",", enconding = "UTF8")
 }
 \arguments{
 \item{path}{String. A path file.}

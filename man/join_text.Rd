@@ -2,10 +2,10 @@
 % Please edit documentation in R/join_text.R
 \name{join_text}
 \alias{join_text}
-\title{Load frequent used packages.}
+\title{Join delimited text file.}
 \usage{
-join_text(path, pattern = ".csv", header = FALSE, sep = ";",
-  dec = ",", enconding = "UTF8")
+join_text(path = ".", pattern = ".csv", header = FALSE, sep = ";",
+  dec = ",", encoding = "UTF-8")
 }
 \arguments{
 \item{path}{String. A path file.}
@@ -13,16 +13,20 @@ join_text(path, pattern = ".csv", header = FALSE, sep = ";",
 \item{pattern}{String. A pattern file like .txt or .csv.}
 
 \item{header}{Logical. TRUE if the file has a header collum.}
+
+\item{sep}{String. Set the separator character. ';' is default.}
+
+\item{dec}{String. Set the decimal indicator. ',' is default.}
+
+\item{quaote}{Strig. the set of quoting characters. "\"" is dafault.}
+
+\item{enconding}{String. Set the file enconding. 'UTF-8' is default.}
 }
 \value{
 A unique file from all files in join.
 }
 \description{
-The package pass two argments x and y. x is a vector with packages that user plan to load. y is a logical vector, where TRUE load a default package list from developer.
-You need chosse Y TRUE or FALSE. If x do not specified, the package load a list of default packages.
-}
-\examples{
-join_text(path='./data/', pattern='.csv', header = T)
-
-
+The package pass several commum arguments like read_csv for join multiples
+text files. You need pass a folder path. The function enters the specified
+folder and joins all files and returns an object in your R. workspace.
 }

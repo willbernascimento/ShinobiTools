@@ -2,3 +2,5 @@
 
 export(join_text)
 export(load_pkg)
+export(minhas_cores)
+export(theme_flat)

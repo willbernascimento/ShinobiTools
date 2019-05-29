@@ -16,7 +16,7 @@
 #' @examples
 #' \dontrun{
 #' # Call the function with the path is needed.
-#' join_text(path='~/folder/, pattern='.txt', sep=',')
+#' #join_text(path='~/folder/, pattern='.txt', sep=',')
 #' }
 
 join_text <- function(path='.', pattern='.csv', header=FALSE, sep=';', dec=',',

@@ -30,3 +30,9 @@ The package pass several commum arguments like read_csv for join multiples
 text files. You need pass a folder path. The function enters the specified
 folder and joins all files and returns an object in your R. workspace.
 }
+\examples{
+\dontrun{
+# Call the function with the path is needed.
+#join_text(path='~/folder/, pattern='.txt', sep=',')
+}
+}

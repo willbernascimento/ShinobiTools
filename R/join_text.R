@@ -9,7 +9,7 @@
 #' @param header Logical. TRUE if the file has a header collum.
 #' @param sep String. Set the separator character. ';' is default.
 #' @param dec String. Set the decimal indicator. ',' is default.
-#' @param quaote Strig. the set of quoting characters. "\"" is dafault.
+#' @param quote Strig. the set of quoting characters. "\"" is dafault.
 #' @param enconding String. Set the file enconding. 'UTF-8' is default.
 #' @export join_text
 #' @return A unique file from all files in join.
@@ -19,17 +19,38 @@
 #' #join_text(path='~/folder/, pattern='.txt', sep=',')
 #' }
 
-join_text <- function(path='.', pattern='.csv', header=FALSE, sep=';', dec=',',
-                      encoding = "UTF-8"){
-  setwd(path)
-  dados1 <- NULL
-  arquivos <- dir(pattern = pattern)
-  for (i in 1:length(arquivos)) {
-    dados <- utils::read.csv(arquivos[i],header = header, sep = sep, dec = dec,
-                             quote = "\"", fileEncoding = encoding)
-    dados1 <- rbind(dados1, dados)
-    print(arquivos[i])
+join_text <-
+  function(path = '.',
+           pattern = '.csv',
+           header = FALSE,
+           sep = ';',
+           dec = ',',
+           quote = "\"",
+           encoding = "UTF-8") {
+
+    orig_dir <- getwd()
+
+    setwd(path)
+
+    dados1 <- NULL
+
+    arquivos <- dir(pattern = pattern)
+
+    for (i in 1:length(arquivos)) {
+      dados <-
+        utils::read.csv(
+          arquivos[i],
+          header = header,
+          sep = sep,
+          dec = dec,
+          quote = quote,
+          fileEncoding = encoding,
+          stringsAsFactors = FALSE
+        )
+
+      dados1 <- rbind(dados1, dados)
+      print(arquivos[i])
+    }
+    setwd(orig_dir)
+    return(dados1)
   }
-  setwd('..')
-  return(dados1)
-}

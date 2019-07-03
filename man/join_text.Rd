@@ -5,7 +5,7 @@
 \title{Join delimited text file.}
 \usage{
 join_text(path = ".", pattern = ".csv", header = FALSE, sep = ";",
-  dec = ",", encoding = "UTF-8")
+  dec = ",", quote = "", encoding = "UTF-8")
 }
 \arguments{
 \item{path}{String. A path file.}
@@ -18,7 +18,7 @@ join_text(path = ".", pattern = ".csv", header = FALSE, sep = ";",
 
 \item{dec}{String. Set the decimal indicator. ',' is default.}
 
-\item{quaote}{Strig. the set of quoting characters. "\"" is dafault.}
+\item{quote}{Strig. the set of quoting characters. "\"" is dafault.}
 
 \item{enconding}{String. Set the file enconding. 'UTF-8' is default.}
 }

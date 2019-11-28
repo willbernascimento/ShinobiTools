@@ -3,8 +3,23 @@
 #' The function call an color hex from a intern list. It has five different
 #' tones for each color that you can control by the index parameter.
 #'
+<<<<<<< HEAD
+<<<<<<< HEAD
 #' @param cor String A color name
 #' @param indice Numéric (index) that indicate the color tones. 1 to 5.
+=======
+<<<<<<< HEAD
+#' @param cor String A color name
+#' @param indice Numéric (index) that indicate the color tones. 1 to 5.
+=======
+#' @param colour String A color name
+#' @param index Numéric (index) that indicate the color tones. 1 to 5.
+>>>>>>> first commit ABKP
+>>>>>>> master
+=======
+#' @param cor String A color name
+#' @param indice Numéric (index) that indicate the color tones. 1 to 5.
+>>>>>>> origin/master
 #'
 #' @export minhas_cores
 #' @example
@@ -13,7 +28,19 @@
 #'
 
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 minhas_cores <- function(cor, indice){
+=======
+<<<<<<< HEAD
+minhas_cores <- function(cor, indice){
+=======
+my_colors <- function(colour, index){
+>>>>>>> first commit ABKP
+>>>>>>> master
+=======
+minhas_cores <- function(cor, indice){
+>>>>>>> origin/master
   laranja <- data.frame(laranja=c('#FFE569', '#F7BE3E', '#F6A20F','#E26A01', '#D71E00'),
 #           row.names = c(),
            stringsAsFactors = F)
